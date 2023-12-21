@@ -26,7 +26,7 @@ const getImages = async () => {
             const imageElement = document.createElement("img")
             imageElement.setAttribute("src", imageObject.url)
             imageContainer.append(imageElement)
-            imageSection.append(ikmageContainer)
+            imageSection.append(imageContainer)
         })
 
     } catch (error) {
