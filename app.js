@@ -18,13 +18,13 @@ const getImages = async () => {
         })
     }
     try {
-        const response = await fetch("https://api.openai.com/v1/images/generations", option)
+        const response = await fetch('https://api.openai.com/v1/images/generations', option)
         const data = await response.json()
         data?.data.array.forEach(imageObject => {
-            const imageContainer = document.createElement("div")
-            imageContainer.classList.add("image-container")
-            const imageElement = document.createElement("img")
-            imageElement.setAttribute("src", imageObject.url)
+            const imageContainer = document.createElement('div')
+            imageContainer.classList.add('image-container')
+            const imageElement = document.createElement('img')
+            imageElement.setAttribute('src', imageObject.url)
             imageContainer.append(imageElement)
             imageSection.append(imageContainer)
         })
